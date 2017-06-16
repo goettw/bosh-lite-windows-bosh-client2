@@ -1,4 +1,4 @@
-# Install bosh-lite on windows using virtualbox and bosh-cli2
+# Install cloudfoundry on windows using virtualbox and bosh-cli2
 
 This is for windows users who want to use bosh-cli2 to install cloudfoundry on virtualbox.
 
