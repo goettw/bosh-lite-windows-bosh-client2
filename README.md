@@ -7,20 +7,19 @@ The setup consists of 2 VMs
 - cf: initially a pre-defined vagrantbox, running bosh-director, configured to simulate VMs with warden-containers. After installation has been completed, this VM will also contain cloudfoundry.  
 - bosh-cli2: a linux box with bosh-cli v2 [bosh-cli2-v2](https://bosh.io/docs/cli-v2)
 
+*if you haven't installed vagrant and virtualbox yet, you should do it now*
 
-Both VMs will be created, running:
+Both VMs will be created running:
 ```
 vagrant up
 ```
-
-*if you haven't installed vagrant and virtualbox yet, you should do it now*
-
-For the rest of the installation, you have to enter the bosh-cli2 VM. I use git bash, and run the following command: 
+To enter the bosh-cli2 VM, run the following command: 
+*(you need ssh. The bash client that comes with [git for windows](https://git-scm.com/download/win) is a good option)*
 
 ```
 vagrant ssh bosh-cli2
 ```
-Once you're in the client machine, type the following commands:
+Once you've entered the client VM, type the following commands:
 ```
 cd ~/workspace/cf-deployment
 export STEMCELL_VERSION=$(bosh int ~/workspace/cf-deployment/cf-deployment.yml --path /stemcells/alias=default/version)
