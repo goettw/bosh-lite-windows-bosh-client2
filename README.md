@@ -30,3 +30,4 @@ bosh -d cf deploy ~/workspace/cf-deployment/cf-deployment.yml -o ~/workspace/cf-
 to retrieve the admin password, type
 ```
 bosh interpolate ~/deployments/vbox/deployment-vars.yml --path /cf_admin_password
+```
