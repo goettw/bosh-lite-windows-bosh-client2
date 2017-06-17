@@ -1,9 +1,12 @@
 # Install cloudfoundry on windows using virtualbox and bosh-cli2
 
-This is for windows users who want to use bosh-cli2 to install cloudfoundry on virtualbox.
+This is for windows users who want to use bosh-cli2 to install cloudfoundry on virtualbox. 
 
-We will install cloudfoundry on a pre-defined vagrantbox, running bosh-director. 
-[bosh-cli2-v2](https://bosh.io/docs/cli-v2) currently only supports Linux and Mac. This means that we have to create another VM, that acts as client.
+
+The setup consists of 2 VMs
+- cf: initially a pre-defined vagrantbox, running bosh-director, configured to simulate VMs with warden-containers. After installation has been completed, this VM will also contain cloudfoundry.  
+- bosh-cli2: a linux box with bosh-cli v2 [bosh-cli2-v2](https://bosh.io/docs/cli-v2)
+
 
 Both VMs will be created, running:
 ```
@@ -12,7 +15,7 @@ vagrant up
 
 *if you haven't installed vagrant and virtualbox yet, you should do it now*
 
-Now you should 2 VMs. For the rest of the installation, you have to enter the client. To do that, you need an ssh - client, which comes together with the git client for windows, there will also be other options. I use git bash, and run the following command: 
+For the rest of the installation, you have to enter the bosh-cli2 VM. I use git bash, and run the following command: 
 
 ```
 vagrant ssh bosh-cli2
