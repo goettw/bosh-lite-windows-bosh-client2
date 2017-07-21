@@ -31,3 +31,7 @@ to retrieve the admin password, type
 ```
 bosh interpolate ~/deployments/vbox/deployment-vars.yml --path /cf_admin_password
 ```
+On your windows machine, add the route as admin (Powershell)
+```
+route add 10.244.0.0/19 192.168.50.4
+```
